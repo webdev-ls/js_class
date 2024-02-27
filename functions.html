@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 2</title>
+</head>
+<body>
+    <script>
+        // funtions 
+        // console.log(gstCalculator(100,18));
+        // function gstCalculator(productPrice,gstApplicable,isInclusive = true){
+        //     if(isInclusive === true){
+        //         const gst = productPrice * gstApplicable/(100+gstApplicable);
+        //         const basePrice = productPrice - (productPrice * gstApplicable/(100+gstApplicable));
+        //         return [basePrice.toFixed(2),gst.toFixed(2)]
+        //     }else{
+        //         const gst = productPrice * gstApplicable/(100);
+        //         const basePrice = productPrice + (productPrice * gstApplicable/(100));
+        //         return [basePrice.toFixed(2),gst.toFixed(2)]
+        //     }
+        // }
+
+        // const gstCalculator2 = ()=>{
+            
+        // }
+
+
+        // print prime numbers till n using functions
+        // printPrimeNumbers(50);
+        // function printPrimeNumbers(n){
+        //     // 1. how to check number is prime or not
+        //     // 3 7 11 13 17 19 23 
+        //     for (let i = 2; i <= n; i++) {
+        //         // check if i is prime or not
+        //         let count = 0;
+        //         for (let j = 2; j <= Math.sqrt(i) ; j++) {
+        //             // console.log("in");
+        //             if(i%j == 0){
+        //                 count ++;
+        //             }
+        //             if(count > 0){
+        //                 break;
+        //             }
+        //         }
+        //         if(count === 0){
+        //             console.log(i);
+        //         }
+                
+        //     }
+        // }
+
+        // print first n prime number 26/2/23
+        firstPrimeNumbers(10)
+        // console.log(firstPrimeNumbers);
+        function firstPrimeNumbers(numberofPrimeNumberRequired){
+            let count = 0,i=2;
+            while(count <= numberofPrimeNumberRequired){
+                let divide = 0;
+                for (let j = 2; j <= Math.sqrt(i) ; j++) {
+                    if(i%j == 0){
+                        divide ++;
+                    }
+                    if(divide > 0){
+                        break;
+                    }
+                }
+                if(divide === 0){
+                    console.log(i);
+                    count++;
+                }
+                i++;
+            }
+        }
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 3 Objects</title>
+</head>
+<body>
+    <script>
+        // js objects
+        // const obj = {
+        //     name : 'name',
+        //     empCode : 1,
+        //     role : "manager"
+        // }
+        // console.log(obj);
+
+        const marks = prompt("enter marks");
+        const message = {
+            "10" : false,
+            "20" : "You Are not So Weak",
+            "30" : "You Are not Weak",
+            "40" : "You Can Perform Better",
+            "50" : "You Are Average",
+        }
+        console.log(typeof(marks));
+        // if(message[marks]){
+        //     const msg = message[marks]
+        //     console.log(msg+"10000");
+        // }
+        if(Object.hasOwnProperty.call(message,marks)){
+            const msg = message[marks]
+            console.log(msg);
+        }
+        // if(marks == 10){
+        //     console.log("You are weak");
+        // }else if(marks == 20){
+        //     console.log("You are not so weak")
+        // }
+        
+    </script>
+</body>
+</html>
