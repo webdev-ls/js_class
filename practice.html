@@ -3,10 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Class 5</title>
+    <title>Class 5 and 6</title>
 </head>
 <body>
+    <button class="btn" id="btn1">Hello BTN 1</button><button class="btn" id="btn2">Hello BTN 2</button><button class="btn" id="btn3">Hello BTN 3</button><button class="btn" id="btn4">Hello BTN 4</button><button class="btn" id="btn5">Hello BTN 5</button><button class="btn" id="btn6">Hello BTN 6</button><button class="btn" id="btn7">Hello BTN 7</button><button class="btn" id="btn8">Hello BTN 8</button><button class="btn" id="btn9">Hello BTN 9</button><button class="btn" id="btn10">Hello BTN 10</button>
     <!-- practice of dom elements  -->
     <!-- homework-> to get user index from prompt and use a function to print a dom elemnet of body at that index -->
+    <script>
+        const userIndex = prompt("Enter a Index to Print");
+
+        const getElementOnIndex = (index)=>{ // user defined function 
+            const body = document.querySelector("body");
+            console.log(body);
+            const children = body.children;
+            console.log(children[index]);
+        }
+
+        getElementOnIndex(userIndex); //  user defined function 
+        const userIndex2 = prompt("Enter a Index to Print");
+        getElementOnIndex(userIndex2)
+        const userIndex3 = prompt("Enter a Index to Print");
+        getElementOnIndex(userIndex3)
+        const userIndex4 = prompt("Enter a Index to Print");
+        getElementOnIndex(userIndex4)
+        console.log("last  ",userIndex);
+
+    </script>
 </body>
 </html>

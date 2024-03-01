@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Class 2</title>
+    <title>Class 2 & 6</title>
 </head>
 <body>
     <script>
@@ -51,27 +51,55 @@
         // }
 
         // print first n prime number 26/2/23
-        firstPrimeNumbers(10)
+        // firstPrimeNumbers(10)
         // console.log(firstPrimeNumbers);
-        function firstPrimeNumbers(numberofPrimeNumberRequired){
-            let count = 0,i=2;
-            while(count <= numberofPrimeNumberRequired){
-                let divide = 0;
-                for (let j = 2; j <= Math.sqrt(i) ; j++) {
-                    if(i%j == 0){
-                        divide ++;
-                    }
-                    if(divide > 0){
-                        break;
-                    }
-                }
-                if(divide === 0){
-                    console.log(i);
-                    count++;
-                }
-                i++;
-            }
+        // function firstPrimeNumbers(numberofPrimeNumberRequired){
+        //     let count = 0,i=2;
+        //     while(count <= numberofPrimeNumberRequired){
+        //         let divide = 0;
+        //         for (let j = 2; j <= Math.sqrt(i) ; j++) {
+        //             if(i%j == 0){
+        //                 divide ++;
+        //             }
+        //             if(divide > 0){
+        //                 break;
+        //             }
+        //         }
+        //         if(divide === 0){
+        //             console.log(i);
+        //             count++;
+        //         }
+        //         i++;
+        //     }
+        // }
+
+        // 1/3/23 Hoisting
+        const gst = 10;
+        console.log(typeof(gst));
+        console.log(typeof(functionName));
+        console.log(functionName);
+        functionName();
+        
+        // function functionName(){
+        //     // console.log("before error");
+        //     // console.log("before init ",gst);
+        //     // console.log("after error");
+
+        //     gst = 20;
+        //     console.log(gst);
+        // }
+
+        var functionName = ()=>{
+            // gst = 20;
+            console.log(gst);
         }
+        
+        // function functionName(){
+        //     gst = 20;
+        //     console.log(gst);
+        // }
+        
+        console.log(gst);
 
 
 
