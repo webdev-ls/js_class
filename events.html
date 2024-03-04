@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            transition: 3s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="toApplyOnCopied()" class="button" id="buttonNumber1">Dummy Button Number 1</button><button onclick="fn" class="button" id="buttonNumber2">Dummy Button Number 2</button><button class="button" id="buttonNumber3">Dummy Button Number 3</button><button class="button" id="buttonNumber4">Dummy Button Number 4</button><button class="button" id="buttonNumber5">Dummy Button Number 5</button><button class="button" id="buttonNumber6">Dummy Button Number 6</button><button class="button" id="buttonNumber7">Dummy Button Number 7</button><button class="button" id="buttonNumber8">Dummy Button Number 8</button><button class="button" id="buttonNumber9">Dummy Button Number 9</button><button class="button" id="buttonNumber10">Dummy Button Number 10</button>
+
+    <script>
+        const button1 = document.body.firstElementChild;
+        console.log(button1);
+        button1.addEventListener("click",()=>{
+            console.log("Add event Listener");
+        });
+        // button1.onclick = ()=>{
+        //     console.log("direct");
+        // }
+
+        function fn(){
+            document.body.style.background = "#cc0000";
+            console.log("fn");
+        }
+
+        // button1.addEventListener("mouseover",()=>{
+        //     console.log("mouse over");
+        //     document.body.style.background = "#cc0000";
+        // })
+        // button1.addEventListener("mouseout",fn)
+        // button1.addEventListener("dblclick",()=>{
+        //     alert("double clicked");
+        // })
+
+        function toApplyOnCopied(){ // user defined funciton
+            const div = document.createElement("div");
+            // div.innerHTML = document.body.textContent;
+            div.innerHTML = document.body.innerHTML;
+            document.body.appendChild(div);
+
+            // click on another button // homework
+        }
+
+        const buttons = document.querySelectorAll(".button");
+        buttons.forEach((clickAble)=>{
+            // clickAble.addEventListener("click",()=>{ // not copied
+            //     // clickAble.remove(); // remove selected node
+            //     // const heading = document.createElement("h1");
+            //     // heading.innerHTML = `hello ${clickAble.id}`;
+            //     // document.body.appendChild(heading);
+                
+            //     const div = document.createElement("div");
+            //     // div.innerHTML = document.body.textContent;
+            //     div.innerHTML = document.body.innerHTML;
+            //     document.body.appendChild(div);
+            // })
+
+            // clickAble.onclick = ()=>{ // not copied
+            //     const div = document.createElement("div");
+            //     // div.innerHTML = document.body.textContent;
+            //     div.innerHTML = document.body.innerHTML;
+            //     document.body.appendChild(div);
+            // }
+        })
+    </script>
+</body>
+</html>
