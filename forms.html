@@ -44,15 +44,40 @@
         // email.addEventListener("change",()=>{
         //     console.log("change event");
         // })
-        email.addEventListener("input",()=>{
-            alert("working")
-            // understanding classlist
-            // console.log(email.classList);
-            // email.classList.add("mx-5")
-            // console.log(email.classList);
+        // email.addEventListener("input",()=>{
+        //     alert("working")
+        //     // understanding classlist
+        //     // console.log(email.classList);
+        //     // email.classList.add("mx-5")
+        //     // console.log(email.classList);
             
             
-            console.log(email.value);
+        //     console.log(email.value);
+        //     if(email.value === "chetram@dizzibooster.com"){
+        //         console.log("valid email");
+        //         email.classList.remove("is-invalid");
+        //         email.classList.add("is-valid");
+        //     }else{
+        //         email.classList.remove("is-valid");
+        //         email.classList.add("is-invalid");   
+        //     }
+        //     // console.log("input event");
+        // });
+
+        // password.addEventListener("input",()=>{
+        //     const customJSEvent = new Event("input");
+        //     email.dispatchEvent(customJSEvent);
+        //     if(password.value === "123"){
+        //         console.log("valid email");
+        //         password.classList.remove("is-invalid");
+        //         password.classList.add("is-valid");
+        //     }else{
+        //         password.classList.remove("is-valid");
+        //         password.classList.add("is-invalid");   
+        //     }
+        // })
+
+        email.addEventListener("change",()=>{
             if(email.value === "chetram@dizzibooster.com"){
                 console.log("valid email");
                 email.classList.remove("is-invalid");
@@ -61,21 +86,11 @@
                 email.classList.remove("is-valid");
                 email.classList.add("is-invalid");   
             }
-            // console.log("input event");
-        });
-
-        password.addEventListener("input",()=>{
-            const customJSEvent = new Event("input");
-            email.dispatchEvent(customJSEvent);
-            if(password.value === "123"){
-                console.log("valid email");
-                password.classList.remove("is-invalid");
-                password.classList.add("is-valid");
-            }else{
-                password.classList.remove("is-valid");
-                password.classList.add("is-invalid");   
-            }
         })
+
+        email.value = "dsvdsbdsfbdsbdsb";
+        const changeEvent = new Event("change");
+        email.dispatchEvent(changeEvent)
     </script>
 </body>
 </html>
