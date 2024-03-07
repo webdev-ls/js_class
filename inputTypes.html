@@ -49,7 +49,7 @@
               <label class="form-check-label" for="exampleCheck1">Check me out</label>
             </div>
             <button type="reset" name="resetBtn" class="btn btn-primary">reset</button>
-            <button type="submit" name="submitBtn" class="btn btn-primary">Submit</button>
+            <button type="submit" name="submitBtn" class="btn btn-primary">Continue</button>
         </form>
     </div>
 
@@ -63,9 +63,9 @@
         console.log(color);
         console.log(color.value);
 
-        // form.addEventListener("submit",(eventttttt)=>{
-        //     eventttttt.preventDefault();
-        //     console.log(eventttttt);
+        // form.addEventListener("submit",(event)=>{
+        //     event.preventDefault();
+        //     console.log(event);
         //     console.log("sdgrdefhdf");
         // })
 
@@ -77,22 +77,50 @@
         const patterns = {
             // type : regex,
             tel : "/^([+]\d{2})?\d{10}$/",
-            email : "[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}"
-
+            email : "[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}",
         }
 
+        // const emailPattern = "[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}]";
         function formValidation(){
             const inputs = document.querySelectorAll("input");
             let flag = true;
             inputs.forEach(input => {
-                const type = input.getAttribute("type");
+                const type = input.type;
+                // console.log(type);
+
+                // if(type == "email"){
+                //     // validate email here
+                //     // const regex = new RegExp(patterns[type]);
+                    
+                //     console.log("email fouhnd");
+                // }else if(type == "password"){
+                //     // const regex = new RegExp(patterns[type]);
+                //     // const regex = new RegExp("[A-Za+\.[A-Za-z]{2,}]");
+                //     // validate password here
+                // }else if(type == "tel"){
+                //     // validate mobile here
+                //     // const regex = new RegExp(patterns[type]);
+                //     // const regex = new RegExp("[A-Za-z0-9._%+-]+@[A-Za.-]+\.[A-Za-z]{2,}]");
+                // }
+                
                 if(patterns[type]){
-                    console.log(input);
+                    console.log("inside    ");
                     const regex = new RegExp(patterns[type]);
                     if(!regex.test(input.value)){
-                        flag = false;
+                        console.log("sgsgr");
+                            flag = false;
                     }
                 }
+
+
+                // const type = input.getAttribute("type");
+                // if(patterns[type]){
+                //     console.log(input);
+                //     const regex = new RegExp(patterns[type]);
+                //     if(!regex.test(input.value)){
+                //         flag = false;
+                //     }
+                // }
             });
             return flag;
         }
