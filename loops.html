@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops Class 10</title>
+</head>
+<body>
+    <script>
+        // types of loop
+        // 1. For Loop // forEach 
+        // 2. While Loop,
+        // 3 Do while Loop
+
+    //    for(let i =0 ; i < 5; i++){
+    //     // * # # # # # 
+    //     // * * # # # # 
+    //     // * * * # # # 
+    //     // * * * * # # 
+    //     // * * * * * # 
+    //     let str = "";
+    //     for(let j = 0 ; j<= 5; j++){
+    //         // str = str+ "* ";
+    //         if(j<=i){
+    //             str+= "* ";
+    //         }else{
+    //             str+= "# ";
+    //         }
+    //     }
+    //     // console.log("");
+    //     console.log(str+"\n");
+
+    //    }
+
+
+    const n = 20;
+       for(let i =0 ; i < n; i++){
+        // * # # # # # 
+        // * * # # # # 
+        // * * * # # # 
+        // * * * * # # 
+        // * * * * * # 
+        let str = "";
+        for(let j = 0 ; j< n; j++){
+            // str = str+ "* ";
+            if(j < n-i-1){
+                str+= "# ";
+            }else{
+                str+= "* ";
+            }
+        }
+        // console.log("");
+        console.log(str+"\n");
+
+       }
+
+       
+
+    //    const arr = [1,4,5,6,"dsvdsbv","aaaa"];
+
+    //    arr.forEach((eee,i)=>{
+    //     console.log("index   ",i);
+    //     console.log(eee);
+    //    })
+
+
+    </script>
+</body>
+</html> 
