@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const n = 11;
+        const m = 30;
+        let str = "";
+        for(let i =0 ; i <= (n-1)/2; i++){
+            for(let j = 0 ; j< n; j++){
+                // str = str+ "* ";
+                if(j == (n-1)/2 && i== (n-1)/2){
+                    str+=` ${m*m}`;
+                }else if((j== i || j == n-i -1) ){
+                    str+= ` ${m-(parseInt(n/2)-1-i)}`;
+                }else{
+                    str+= "   ";
+                }
+            }
+            str+=" \n" 
+        }
+        for(let i =1 ; i <= n/2; i++){
+            for(let j = 0 ; j< n; j++){
+                // str = str+ "* ";
+                console.log(parseInt(n/2)-i,parseInt(n/2)+i);
+                if((j== parseInt(n/2)-i || j== parseInt(n/2)+i ) ){
+                    str+= ` ${m-(i-1)}`;
+                }else{
+                    str+= "   ";
+                }
+            }
+            str+=" \n" 
+        }
+
+        // for(let i = parseInt(n/2)-1 ; i >= 0; i--){
+        //     for(let j = 0 ; j< n; j++){
+        //         // str = str+ "* ";
+        //         console.log(parseInt(n/2));
+        //         if((j== parseInt(n/2)-i || j== parseInt(n/2)+i ) ){
+        //             str+= "* ";
+        //         }else{
+        //             str+= "  ";
+        //         }
+        //     }
+        //     str+=" \n" 
+        // }
+        console.log(str);
+    </script>
+</body>
+</html>

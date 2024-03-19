@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const n = 15;
+        const m = 7;
+        let str = "";
+        for(let i =0; i< n; i++){
+            for(let j = 0; j< n; j++){
+                if(i == 0 || i == n-1){
+                    str+= " .";
+                }else if(i == (n-1)/2 && j == (n-1)/2){
+                    str+= ` ${m*m}`;
+                }else if((i == 1 && j<= i) || (i == j) || (i == n-2 && j>=i)){
+                    str+= ` ${m}`;
+                }else{
+                    str+= " .";
+                }
+            }
+            str += "\n";
+        }
+        console.log(str);
+    </script>
+</body>
+</html>
