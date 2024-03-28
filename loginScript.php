@@ -1,6 +1,20 @@
 <?php 
+echo "<pre>";
+var_dump($_POST);
+if(checkUserLogin($_POST) === true){
+    echo "user ok h ";
+    session_start();
+    $_SESSION['user'] = $_POST['username'];
+    $_SESSION['pass'] = $_POST['password'];
 
-print_r($_POST);
+    unset($_SESSION['aevfedv']);
+    print_r($_SESSION);
+
+    header("Location: dashboard.php");
+
+}
+var_dump($_POST);
+
 
 if(isset($_POST['rememberMe'])){
     setcookie("username",$_POST['username'],time()+(60*60*24*7),"/");
@@ -13,4 +27,21 @@ if(isset($_POST['rememberMe'])){
 }
 
 
+function fnName(){
+
+}
+
+function checkUserLogin($userData){ // call by value
+// function checkUserLogin(&$userData){ // call by reference
+    // sql 
+    // echo "function checkUSerLogin";
+    // echo "<pre>";
+    // print_r($userData);
+
+    if($userData['username'] == "chetram" && $userData['password'] == "123"){
+        $userData['username'] = "cheeku";
+       return true;
+    }
+    return false;
+}
 ?>

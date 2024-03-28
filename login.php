@@ -1,4 +1,13 @@
 
+<?php
+session_start();
+// echo "<pre>";
+// print_r($_SESSION); exit;
+if(isset($_SESSION['user'])){
+    header("Location: dashboard.php");
+}
+
+?>
 <!DOCTYPE html>
 <html>
     
@@ -34,6 +43,16 @@
 				</div>
 				<div class="d-flex justify-content-center form_container">
 					<form action="loginScript.php" method="post" onsubmit="return formValidate()">
+						<div class="input-group mb-3">
+							<div class="input-group-append">
+								<span class="input-group-text"><i class="fas fa-user"></i></span>
+							</div>
+							<select class="form-control input_user" name="org" id="">
+								<option disabled selected value="choose">Choose Org</option>
+								<option  value="ls">Learning Sessions</option>
+								<option value="dizzibooster">Dizzibooster</option>
+							</select>
+						</div>
 						<div class="input-group mb-3">
 							<div class="input-group-append">
 								<span class="input-group-text"><i class="fas fa-user"></i></span>
